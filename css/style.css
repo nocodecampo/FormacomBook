@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+
+header {
+    background-color: cornflowerblue;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    max-height: 100px;
+    object-fit: contain;
+}
+
+header h1 {
+    color: white;
+    font-size: 40px;
+}
+
+#seccionFotos {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 24px;
+    column-gap: 24px;
+    padding: 24px;
+    justify-content: space-around;
+}
+
+article {
+    width: 30%;
+    padding: 8px;
+    background-color: cornflowerblue;
+    border-radius: 8px;
+}
+
+.contenedorImg {
+    height: 290px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+article img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.dataArticle {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    column-gap: 8px;
+}
+
+.dataArticle h3 {
+    width: 100%;
+}
+
+.dataArticle i {
+    color:darkgoldenrod;
+}
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    background-color: #ccc;
+}
+
+
+/* Dispositivos pequeños (smartphones) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 28px;
+        margin-bottom: 16px;
+    }
+
+    .logo {
+        max-height: 80px;
+    }
+
+    #seccionFotos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    article {
+        width: 90%;
+    }
+}
+
+/* Dispositivos medianos (tablets y pantallas pequeñas) */
+@media (max-width: 1024px) {
+    #seccionFotos {
+        justify-content: center;
+        column-gap: 16px;
+        row-gap: 16px;
+    }
+
+    article {
+        width: 45%;
+    }
+}
+
+/* Dispositivos muy pequeños (teléfonos antiguos o pantallas pequeñas) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    .logo {
+        max-height: 60px;
+    }
+
+    #seccionFotos {
+        padding: 16px;
+    }
+
+    article {
+        width: 100%;
+    }
+
+    .contenedorImg {
+        height: auto;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+}
